@@ -48,6 +48,23 @@ ${response.data.punchline}`
   }
 });
 
+app.command("/mogbot-wordle", async ({ ack, respond }) => {
+  await ack();
+
+  try {
+    const date = new Date().toLocaleDateString("en-CA", {
+      timeZone: "America/Los_Angeles"
+    });
+    const response = await axios.get(`https://www.nytimes.com/svc/wordle/v2/${date}.json`);
+    await respond({
+      text: `Wordle #${response.data.days_since_launch} answer:\n${response.data.solution.toUpperCase()}`
+    });
+  } catch (err) {
+    await respond({ text: "Failed to fetch today's Wordle answer." });
+  }
+});
+
+
 
 app.command("/mogbot-ping", async ({ command, ack, respond }) => {
   const start = Date.now();
