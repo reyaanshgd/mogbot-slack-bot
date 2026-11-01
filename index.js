@@ -17,7 +17,10 @@ app.command("/mogbot-help", async ({ ack, respond }) => {
     text:
 `Available Commands:
 /mogbot-ping - Check bot latency
-/mogbot-catfact - Get a cat fact`
+/mogbot-catfact - Get a cat fact
+/mogbot-joke - Get a joke
+/mogbot-wordle - Get today's Wordle answer
+/mogbot-help - Show this help message`
   });
 });
 
