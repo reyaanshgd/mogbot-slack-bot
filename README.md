@@ -10,7 +10,7 @@ A slack bot, that will make your message look cool compared to the average slack
 
 * **Add to Slack (Install Link):** [https://slack.com/oauth/v2/authorize?client_id=2210535565.12347000660290&scope=commands](https://slack.com/oauth/v2/authorize?client_id=2210535565.12347000660290&scope=commands)
 * **Watch Mogbot Live (Test Channel):** Join the test channel on the Slack workspace to see Mogbot run live:  
-  👉 **[#mogbot-testing](https://slack.com/app_redirect?channel=mogbot-testing)** *(or join your workspace's `#mogbot-testing` channel)*
+  👉 **[#mogbot-testing](https://app.slack.com/client/E09V59WQY1E/C0CDKKKG4DV)** *(or join your workspace's `#mogbot-testing` channel)*
 
 ---
 
