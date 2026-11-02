@@ -14,11 +14,84 @@ A slack bot, that will make your message look cool compared to the average slack
 
 ---
 
-## 🛠️ How to Run Mogbot Locally
+## 📥 How to Install Mogbot to Your Slack Workspace
 
-Follow these steps to get Mogbot up and running locally or on a server:
+If you just want to use Mogbot in your Slack workspace without hosting code:
 
-### 1. Install Dependencies
-Clone the repository and install the required npm packages:
+1. Click the **[Add to Slack Link](https://slack.com/oauth/v2/authorize?client_id=2210535565.12347000660290&scope=commands)**.
+2. Select the Slack workspace where you want to add Mogbot.
+3. Review the requested permissions (`commands`) and click **Allow**.
+4. Open your Slack app, go to any channel, and type `/invite @Mogbot` to add the bot.
+5. Type `/mogbot-help` to start using commands!
+
+---
+
+## 🛠️ How to Self-Host / Run Mogbot Yourself
+
+If you want to run your own instance of Mogbot from source code, follow these steps:
+
+### 1. Prerequisites
+Make sure you have installed:
+* **Node.js** (v16.x or higher)
+* **npm** (comes with Node.js)
+* A **Slack Workspace** where you have permission to install apps
+
+---
+
+### 2. Create Your Own Slack App
+1. Go to the **[Slack API Dashboard](https://api.slack.com/apps)** and click **Create New App** > **From an app manifest** (or **From scratch**).
+2. **Enable Socket Mode:**
+   * Go to **Settings** > **Socket Mode** in the left sidebar.
+   * Toggle **Enable Socket Mode** to **ON**.
+   * Generate an **App-Level Token** with the `connections:write` scope. Save this token (`xapp-...`).
+3. **Configure Scopes:**
+   * Go to **Features** > **OAuth & Permissions**.
+   * Under **Bot Token Scopes**, add the `commands` scope.
+4. **Add Slash Commands:**
+   * Go to **Features** > **Slash Commands** and create:
+     * `/mogbot-help`
+     * `/mogbot-ping`
+     * `/mogbot-catfact`
+     * `/mogbot-joke`
+     * `/mogbot-wordle`
+5. **Install App to Workspace:**
+   * Go to **Settings** > **Install App** and click **Install to Workspace**.
+   * Copy the **Bot User OAuth Token** (`xoxb-...`).
+
+---
+
+### 3. Clone Repository & Install Dependencies
+
 ```bash
+# Clone the repository
+git clone [https://github.com/your-username/mogbot.git](https://github.com/your-username/mogbot.git)
+cd mogbot
+
+# Install dependencies (@slack/bolt, axios, dotenv)
 npm install
+```
+---
+
+### Step 4: Set Up Environment Variables
+Create a .env file in the root directory:
+```bash
+touch .env
+```
+
+Add your credentials inside .env:
+```bash
+SLACK_BOT_TOKEN=xoxb-your-bot-user-oauth-token
+SLACK_APP_TOKEN=xapp-your-app-level-token
+```
+---
+
+### 5. Start the Bot
+Run Mogbot using Node.js:
+
+```bash
+node index.js
+```
+
+When connected, you'll see:
+
+⚡️ Mogbot is live and running via Socket Mode!
