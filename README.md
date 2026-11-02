@@ -64,7 +64,7 @@ Make sure you have installed:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/your-username/mogbot.git](https://github.com/your-username/mogbot.git)
+git clone [https://github.com/reyaanshgd/mogbot.git](https://github.com/reyaanshgd/mogbot.git)
 cd mogbot
 
 # Install dependencies (@slack/bolt, axios, dotenv)
