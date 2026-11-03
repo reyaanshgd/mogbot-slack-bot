@@ -10,11 +10,11 @@ A slack bot, that will make your message look cool compared to the average slack
 
 * **Add to Slack (Install Link):** [https://slack.com/oauth/v2/authorize?client_id=2210535565.12347000660290&scope=commands](https://slack.com/oauth/v2/authorize?client_id=2210535565.12347000660290&scope=commands)
 * **Watch Mogbot Live (Test Channel):** Join the test channel on the Slack workspace to see Mogbot run live:  
-  👉 **[#mogbot-testing](https://app.slack.com/client/E09V59WQY1E/C0CDKKKG4DV)** *(or join your workspace's `#mogbot-testing` channel)*
+   **[#mogbot-testing](https://app.slack.com/client/E09V59WQY1E/C0CDKKKG4DV)** *(or join your workspace's `#mogbot-testing` channel)*
 
 ---
 
-## 📥 How to Install Mogbot to Your Slack Workspace
+## How to Install Mogbot to Your Slack Workspace
 
 If you just want to use Mogbot in your Slack workspace without hosting code:
 
@@ -39,7 +39,7 @@ Make sure you have installed:
 ---
 
 ### 2. Create Your Own Slack App
-1. Go to the **[Slack API Dashboard](https://api.slack.com/apps)** and click **Create New App** > **From an app manifest** (or **From scratch**).
+1. Go to the **Slack API Dashboard: https://api.slack.com/apps** and click **Create New App** > **From an app manifest** (or **From scratch**).
 2. **Enable Socket Mode:**
    * Go to **Settings** > **Socket Mode** in the left sidebar.
    * Toggle **Enable Socket Mode** to **ON**.
@@ -64,7 +64,7 @@ Make sure you have installed:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/reyaanshgd/mogbot.git](https://github.com/reyaanshgd/mogbot.git)
+git clone https://github.com/reyaanshgd/mogbot.git
 cd mogbot
 
 # Install dependencies (@slack/bolt, axios, dotenv)
@@ -94,4 +94,4 @@ node index.js
 
 When connected, you'll see:
 
-⚡️ Mogbot is live and running via Socket Mode!
+Bot is running!
