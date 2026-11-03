@@ -26,7 +26,7 @@ If you just want to use Mogbot in your Slack workspace without hosting code:
 
 ---
 
-## 🛠️ How to Self-Host / Run Mogbot Yourself
+## How to Self-Host / Run Mogbot Yourself
 
 If you want to run your own instance of Mogbot from source code, follow these steps:
 
@@ -65,7 +65,7 @@ Make sure you have installed:
 ```bash
 # Clone the repository
 git clone https://github.com/reyaanshgd/mogbot-slack-bot.git
-cd mogbot
+cd mogbot-slack-bot
 
 # Install dependencies (@slack/bolt, axios, dotenv)
 npm install
